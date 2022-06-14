@@ -1,0 +1,36 @@
+body {
+  background: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+h1 {
+  padding-left: 10px;
+  margin: 0;
+  font-family: 'Niconne', cursive;
+  font-size: 30vh;
+  letter-spacing: 1vw;
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: url('tealBackground.png');
+   background-size: auto 200%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+  &:nth-child(2) {
+    top: 40vh;
+  }
+  @keyframes shine {
+    from {
+      background-position: center 0;
+    }
+    to {
+      background-position: center 200%;
+    }
+  }
+}
