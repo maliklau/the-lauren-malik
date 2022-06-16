@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function PositionedMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -16,6 +16,9 @@ export default function PositionedMenu() {
 
   return (
     <div>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+      </style>
       <Button
         id="demo-positioned-button"
         aria-controls={open ? 'demo-positioned-menu' : undefined}
@@ -45,9 +48,9 @@ export default function PositionedMenu() {
           horizontal: 'left',
         }}
       >
-        <MenuItem sx={{ color: '#ffffff', fontFamily: 'Cochin' }} onClick={handleClose}>About Me</MenuItem>
-        <MenuItem style={{ color: '#ffffff', fontFamily: 'Cochin' }} onClick={handleClose}>Experience</MenuItem>
-        <MenuItem style={{ color: '#ffffff', fontFamily: 'Cochin' }} onClick={handleClose}>Contact</MenuItem>
+        <MenuItem sx={{ color: '#ffffff', fontFamily: 'PT Serif' }} onClick={handleClose}>About Me</MenuItem>
+        <MenuItem style={{ color: '#ffffff', fontFamily: 'PT Serif' }} onClick={handleClose}>Experience</MenuItem>
+        <MenuItem style={{ color: '#ffffff', fontFamily: 'PT Serif' }} onClick={handleClose}>Contact</MenuItem>
       </Menu>
     </div>
   );
